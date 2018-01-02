@@ -11,7 +11,7 @@ if [ "0" == "${#URL}" ]; then
 fi
 
 # Might require a change to other .ogg file
-SOUND='/home/einstein/Android/Sdk/platforms/android-24/data/res/raw/fallbackring.ogg'
+SOUND='/usr/share/sounds/ubuntu/Ubuntu.ogg'
 curl $URL -L --compressed -s > .new.html
 html2text < .new.html > .new.txt
 cp .new.txt .old.txt
