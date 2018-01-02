@@ -9,6 +9,8 @@ if [ "0" == "${#URL}" ]; then
     echo "Specify URL please"
     exit
 fi
+
+# Might require a change to other .ogg file
 SOUND='/home/einstein/Android/Sdk/platforms/android-24/data/res/raw/fallbackring.ogg'
 curl $URL -L --compressed -s > .new.html
 html2text < .new.html > .new.txt
