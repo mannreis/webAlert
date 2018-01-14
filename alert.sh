@@ -15,8 +15,9 @@ SOUND='/usr/share/sounds/ubuntu/Ubuntu.ogg'
 curl $URL -L --compressed -s > .new.html
 html2text < .new.html > .new.txt
 cp .new.txt .old.txt
-
+COUNTER=0
 for (( ; ; )); do
+    echo -n -e "\r$((COUNTER++))   "
     mv .new.txt .old.txt 2> /dev/null
     curl $URL -L --compressed -s > .new.html
     html2text < .new.html > .new.txt
